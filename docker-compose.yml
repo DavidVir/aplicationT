@@ -1,0 +1,20 @@
+version: "3.0"
+
+services:
+    react:
+        restart: always
+        build: Frontend
+        ports: 
+            - "3000:3000"
+
+    reactmo:
+        restart: always
+        build: mockup
+        ports:
+            - "5000:3000"  
+
+    node:
+        restart: always
+        build: Backend
+        ports:
+            - "4000:4000" 
